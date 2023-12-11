@@ -1,6 +1,7 @@
 from pyspark.sql import SparkSession
 
-def start_spark(app_name='my_spark_app', master='local[*]'):
+
+def start_spark(app_name="my_spark_app", master="local[*]"):
     """Start Spark session and get Spark logger.
 
     :param app_name: Name of Spark app.
@@ -11,12 +12,11 @@ def start_spark(app_name='my_spark_app', master='local[*]'):
 
     # get Spark session factory
     spark_builder = (
-        SparkSession
-        .builder
-        .master(master)
+        SparkSession.builder.master(master)
         .config("spark.eventLog.enabled", "true")
         .config("spark.eventLog.dir", "logs")
-        .appName(app_name))
+        .appName(app_name)
+    )
 
     # create session
     spark_session = spark_builder.getOrCreate()

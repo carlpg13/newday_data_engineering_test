@@ -19,4 +19,4 @@ spark-submit --master local[*] --py-files src/jobs/main.py src/jobs/main.py
 ## What else:
 This codebase would benefits from more tests. With more time I would test all the functions from src/jobs/etl/transform and from main.py.
 
-In Addition, I could have be added the movie title and genre to the df_top3_movies DataFrame. And also I could format the timestamp to a better format.
+In Addition, I could have be added the movie title and genre to the df_top3_movies DataFrame. And also I could format the timestamp to a better format. Also I would have added more comments in the code and typing on params.
